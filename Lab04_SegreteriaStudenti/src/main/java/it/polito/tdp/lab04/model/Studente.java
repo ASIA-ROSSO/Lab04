@@ -2,23 +2,23 @@ package it.polito.tdp.lab04.model;
 
 public class Studente {
 	
-	String matricola;
+	Integer matricola;
 	String nome;
 	String cognome;
 	String cds;
 
-	public Studente(String matricola, String nome, String cognome, String cds) {
+	public Studente(Integer matricola, String nome, String cognome, String cds) {
 		this.matricola = matricola;
 		this.cognome= cognome;
 		this.nome = nome;
 		this.cds = cds;
 	}
 
-	public String getMatricola() {
+	public Integer getMatricola() {
 		return matricola;
 	}
 
-	public void setMatricola(String matricola) {
+	public void setMatricola(Integer matricola) {
 		this.matricola = matricola;
 	}
 

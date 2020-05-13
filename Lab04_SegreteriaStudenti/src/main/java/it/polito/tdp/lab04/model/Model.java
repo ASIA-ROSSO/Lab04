@@ -16,7 +16,7 @@ public class Model {
 		return corsi;
 	}
 
-	public Studente getStudente(String matricola) {
+	public Studente getStudente(Integer matricola) {
 		return dao.getStudente(matricola);
 	}
 	
@@ -24,11 +24,15 @@ public class Model {
 		return dao.getStudentiIscrittiAlCorso(corso);
 	}
 	
-	public List<Corso> getCorsiDelloStudente(String matricola) {
+	public List<Corso> getCorsiDelloStudente(Integer matricola) {
 		return dao.getCorsiDelloStudente(matricola);
 	}
 	
 	public boolean doIscrivi(Studente studente, Corso corso) {
-		return dao.inscriviStudenteACorso(studente, corso);
+		return dao.iscriviStudenteACorso(studente, corso);
+	}
+
+	public boolean isStudenteIscrittoACorso(Studente s, Corso cSelezionato) {
+		return dao.isStudenteIscrittoACorso(s,cSelezionato);
 	}
 }
